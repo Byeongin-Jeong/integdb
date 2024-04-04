@@ -1,22 +1,34 @@
 import pymysql
-from .interface import DefaultInterface
+from pymysqlpool import ConnectionPool
+from module.interface import DefaultInterface
 
 pymysql.install_as_MySQLdb()
 
-class MYSQL(DefaultInterface):
-    def connect(self):
+class MySQL(DefaultInterface):
+    def connect(self, pool_size=10):
         try:
-            self._con = pymysql.connect(
-                host=self._host,
-                user=self._user,
-                password=self._password,
-                port=self._port,
-                db=self._schema,
-                charset='utf8')
+            print (pool_size)
+            if self._ispool is False:
+                self._conn = pymysql.connect(
+                    host=self._host,
+                    user=self._user,
+                    password=self._password,
+                    port=self._port,
+                    db=self._schema,
+                    charset='utf8')
+            else:
+                self.config = {
+                    "host": self._host,
+                    "user": self._user,
+                    "port": self._port,
+                    "password": self._password,
+                    "database": self._schema
+                }
+                self._pool = ConnectionPool(size=pool_size, **self.config)
         except Exception as e:
-            raise Exception(f'mysql connect Fail !! error msg: {e}')
+            raise Exception(f'Error connecting to the MySQL: {e}')
         
     def close(self):
-        if self._con is not None:
-            self._con.close()
-            self._con = None
+        if self._conn is not None and self._ispool is False:
+            self._conn.close()
+            self._conn = None

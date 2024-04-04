@@ -1,10 +1,10 @@
 import pymssql
-from .interface import DefaultInterface
+from module.interface import DefaultInterface
 
 class MSSQL(DefaultInterface):
     def connect(self):
         try:
-            self._con = pymssql.connect(
+            self._conn = pymssql.connect(
                 host=self._host,
                 user=self._user,
                 password=self._password,
@@ -12,9 +12,9 @@ class MSSQL(DefaultInterface):
                 database=self._schema,
                 charset='utf8')
         except Exception as e:
-            raise Exception(f'mssql connect Fail !! error msg: {e}')
+            raise Exception(f'Error connecting to the MSSQL: {e}')
         
     def close(self):
-        if self._con is not None:
-            self._con.close()
-            self._con = None
+        if self._conn is not None:
+            self._conn.close()
+            self._conn = None
