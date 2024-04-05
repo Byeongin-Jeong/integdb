@@ -7,7 +7,6 @@ pymysql.install_as_MySQLdb()
 class MySQL(DefaultInterface):
     def connect(self, pool_size=10):
         try:
-            print (pool_size)
             if self._ispool is False:
                 self._conn = pymysql.connect(
                     host=self._host,
