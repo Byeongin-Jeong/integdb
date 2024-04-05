@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="integ-db",
-    version="0.0.8",
+    version="0.0.9",
     author="byeongin.jeong",
     author_email="jbi0214@gmail.com",
     description="This package Integrated Database library",
