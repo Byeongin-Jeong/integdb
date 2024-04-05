@@ -4,11 +4,11 @@
 #### Requirements
 - MySQL
 - MSSQL(SQL Server)
-- MaridDB
+- MariaDB
 
 #### Controller Object
 - MySQL
-- MaridDB
+- MariaDB
 - MSSQL
 - SQLAlchemy
 
