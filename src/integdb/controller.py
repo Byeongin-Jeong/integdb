@@ -1,7 +1,7 @@
-from module import MySQL
-from module import MSSQL
-from module import MariaDB
-from module import SQLAlchemy
+from .module.mysql import MySQL
+from .module.mssql import MSSQL
+from .module.mariadb import MariaDB
+from .module.sqlalchemy import SQLAlchemy
 
 class Controller():
     def __init__(self, host, user, password, port, schema, connection_pool=False):

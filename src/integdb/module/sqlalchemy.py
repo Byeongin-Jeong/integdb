@@ -1,7 +1,7 @@
 import pandas as pd
 from sqlalchemy import create_engine
-from module.interface import SessionConfig
 from sqlalchemy.exc import IntegrityError
+from .interface import SessionConfig
 
 class SQLAlchemy(SessionConfig):
     def __init__(self, host, user, password, port, schema, connection_pool):

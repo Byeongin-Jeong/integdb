@@ -1,2 +1,4 @@
 *.pyc
 .vscode/
+dist/
+src/integ_db.egg-info/

@@ -1,5 +1,5 @@
 import pymssql
-from module.interface import DefaultInterface
+from .interface import DefaultInterface
 
 class MSSQL(DefaultInterface):
     def connect(self):

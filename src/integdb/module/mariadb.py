@@ -1,5 +1,5 @@
 import mariadb
-from module.interface import DefaultInterface
+from .interface import DefaultInterface
 
 class MariaDB(DefaultInterface):
     def connect(self, pool_name="app-pool", pool_size=20):

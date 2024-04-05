@@ -4,11 +4,11 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="integdb",
-    version="0.0.1",
+    name="integ-db",
+    version="0.0.6",
     author="byeongin.jeong",
     author_email="jbi0214@gmail.com",
-    description="Python Integrated Database",
+    description="This package Integrated Database library",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Byeongin-Jeong/integdb",
@@ -17,8 +17,16 @@ setup(
     },
     classifiers=[
         "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
+        'Topic :: Database',
     ],
     package_dir={"": "src"},
     packages=find_packages(where="src"),

@@ -1,6 +1,6 @@
 import pymysql
 from pymysqlpool import ConnectionPool
-from module.interface import DefaultInterface
+from .interface import DefaultInterface
 
 pymysql.install_as_MySQLdb()
 
