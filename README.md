@@ -47,3 +47,8 @@ except Exception as e:
 finally:
     controller.MySQL.close()
 ```
+
+---
+## Reference
+1. duplicate SQLalchemy 
+Github : https://gist.github.com/tombohub/0c666583c48c1686c736ae2eb76cb2ea
