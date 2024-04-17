@@ -16,6 +16,9 @@
 - MySQL
 - MariaDB
 
+## Special Feature
+- The SQLAlchemy sql_export(to_sql) function support duplicate keys
+
 ## Install
 #### From PIP
 ```
@@ -50,5 +53,5 @@ finally:
 
 ---
 ## Reference
-1. duplicate SQLalchemy 
+1. duplicate SQLAlchemy 
 Github : https://gist.github.com/tombohub/0c666583c48c1686c736ae2eb76cb2ea
